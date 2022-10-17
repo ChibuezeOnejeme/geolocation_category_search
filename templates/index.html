@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Nearby</title>
+</head>
+<body>
+    <form method="post">
+    <input type="text" name="search">
+    <br>
+    <button type="submit">Search</button>
+    </form>
+
+     <br>
+
+     {% for element in result %}
+
+     <p> {{element}}</p>
+
+     {% endfor %}
+
+
+</body>
+</html>
