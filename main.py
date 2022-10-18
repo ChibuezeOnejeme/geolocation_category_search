@@ -17,10 +17,26 @@ def home():
         API_Key =config('API_KEY')
         geolocator = Nominatim(user_agent="ezemiller")
         location = geolocator.geocode(search)
+        
+        search_contents =search.split(' ')
+        for i in search_contents:
+           item =i
+
+        def search_str(file_path, word):
+          with open(file_path, 'r') as file:
+        # read all content of a file
+            content = file.read()
+        # check if string present in a file
+            if word in content:
+                return word
+        
+        word= search_str("item.txt",item)
+
+
 
 
         
-        url_endpoint =f"https://api.tomtom.com/search/2/categorySearch/hospital.json?key={API_Key}&lat={location.latitude}&lon={location.longitude}"
+        url_endpoint =f"https://api.tomtom.com/search/2/categorySearch/{word}.json?key={API_Key}&lat={location.latitude}&lon={location.longitude}"
         response = requests.get(url_endpoint)
         data = response.json()
         result = json_extract(data,"name")

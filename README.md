@@ -6,7 +6,7 @@ This project is designed to search POI(Point of Interests) in a specific locatio
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to project up and running .
+A quick introduction of the minimal setup you need to get project up and running .
 
 ```shell
 git clone https://github.com/ChibuezeOnejeme/geolocation_category_search.git
