@@ -39,8 +39,16 @@ The back end for the html template is **FLASK** and it will be running on localh
 
 **Files  and  Functions**:
 i) **.env file**: This stores the API KEY for security purposes and keep in gitignore
+
+
 ii) **extract .py**: This file contains a python function for extracting required keys from a json file eg "name" ie for hospital name, eatry name etc.
+
+
 iii) **main . py**: This is the main python file for running program.
+
+
 iv) **item .txt**: This text file contains possible searchable category.
+
+
 v)**requirements .txt**: This contains all dependency programs to be installed for the full functionality of project.
 
