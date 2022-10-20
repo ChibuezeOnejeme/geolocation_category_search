@@ -1,23 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Search Nearby</title>
-</head>
-<body>
-    <form method="post">
-    <input type="text" name="search">
-    <br>
-    <button type="submit">Search</button>
-    </form>
-
-     <br>
-
-     {% for element in result %}
-
-     <p> {{element}}</p>
-
-     {% endfor %}
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
 
 
-</body>
-</html>
+    {{ render_field(form.search_input) }}
+
+   
+    {{ render_field(form.search_category)}}
+   
+   
+
+   
+   
+   
+  
+    
+  </dl>
+    
+<p><input id="submit" type=submit value=Search>
+    
+</form>
+
+    
+    
+    
+    
+    
+    
+    
+    
+<script src='http://code.jquery.com/jquery-1.7.1.min.js'></script>
+<script>
+   $(document).ready(function(){
+    $('#submit').attr('disabled',true);
+    $('#search_input').keyup(function(){
+        if($(this).val().length !=0)
+            $('#submit').attr('disabled', false);            
+        else
+            $('#submit').attr('disabled',true);
+    })
+});
+
+
+
+
+</script>
+
+
