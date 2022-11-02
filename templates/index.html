@@ -1,19 +1,22 @@
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+<h1 > Welcome, Search Your Point of Interest Here</h1>
+<p> The returned data is from open street Map,is a collaborative project to create a free editable geographic database of the world</p>
+
 {% from "_formhelpers.html" import render_field %}
+
+
 <form method=post>
   <dl>
 
-
+    {{  render_field(form.tags)}}
+    <br>
     {{ render_field(form.search_input) }}
 
    
     {{ render_field(form.search_category)}}
    
-   
-
-   
-   
-   
-  
     
   </dl>
     
