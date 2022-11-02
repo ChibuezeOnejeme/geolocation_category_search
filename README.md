@@ -20,7 +20,7 @@ code .   < This will open an editor from shell/bash  >
 
 
 venv/Scripts/activate //In CMD < activate venv for  windows>
-env/Scripts/Activate.ps1 //In Powershel<activate venv for windows>
+env/Scripts/Activate.ps1 //In Powershell<activate venv for windows>
 
 source venv/bin/activate< activate venv for Mac>
 
