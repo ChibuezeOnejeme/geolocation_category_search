@@ -1,5 +1,6 @@
 
 # Geolocation and Location Search Api
+![Home Screen](static/images/poi.png)
 
 
 This project is designed to search POI(Point of Interests) in a specific location making use of Open street Map Wrapper OSMNX .
@@ -24,4 +25,4 @@ source venv/bin/activate< activate venv for Mac>
 pip install -r requirements.txt
 
 **requirements .txt**: This contains all dependency programs to be installed for the full functionality of project.
-
+```
