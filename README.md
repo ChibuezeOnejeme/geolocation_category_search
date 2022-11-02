@@ -2,6 +2,8 @@
 # Geolocation and Location Search Api
 ![Home Screen](static/images/poi.png)
 
+To get tags for this project [click here](https://wiki.openstreetmap.org/wiki/Map_features)
+
 
 This project is designed to search POI(Point of Interests) in a specific location making use of Open street Map Wrapper OSMNX .
 
