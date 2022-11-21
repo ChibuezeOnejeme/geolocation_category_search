@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\USER\Desktop\code\github_projects\geolocation_category_search\venv
+set VIRTUAL_ENV=C:\Users\USER\Desktop\test_git\geolocation_category_search\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

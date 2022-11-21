@@ -1,10 +1,6 @@
 import osmnx as ox
-
-from asyncio.windows_events import NULL
-import requests
 import json
 from flask import Flask, request, render_template,redirect,url_for
-from decouple import config
 from forms import GeolocationForm
 
 
@@ -29,16 +25,17 @@ def index():
 
 @app.route("/results", methods=["POST", "GET"])
 def search_results( search):
-
-       place_name= search.search_input.data
+       """This function takes in put from the the index form and processes it using osmnx  """
+       
+       place_name= search.search_input.data #This grabs the name or the location for search
       
-       search_category =search.search_category.data
+       search_category =search.search_category.data # This grabs the category for the search
 
-       recieved_tags =search.tags.data
+       recieved_tags =search.tags.data # This are the tags eg amenity, building
 
        tags ={recieved_tags:search_category}
       
-       point_of_interest_search = ox.geometries_from_place(place_name,tags=tags)
+       point_of_interest_search = ox.geometries_from_place(place_name,tags=tags) #This the algorithm that performs point of interest search
 
        list_result =point_of_interest_search['name'].values
        result=[]
